@@ -14,8 +14,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#00B894] p-4 md:flex">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-[#00B894] md:px-10 py-2 md:flex ">
+      <div className="container mx-auto flex justify-between items-center flex-1">
         {/* Left-side Logo */}
         <div className="text-white text-2xl font-bold">
           <a href="/">Logo</a>
@@ -52,13 +52,13 @@ const Navbar = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden bg-blue-700 p-4 space-y-4">
           <NavLink className="text-white">Home</NavLink>
-          <NavLink className="text-white">Explore</NavLink>
-          <NavLink className="text-white">Discover</NavLink>
-          <NavLink className="text-white">Jobs</NavLink>
-          <NavLink className="text-white">Contact</NavLink>
+          <NavLink className="text-white">Desing Templates</NavLink>
+          <NavLink className="text-white">Custom Mockup</NavLink>
+          <NavLink className="text-white">Free Mockup</NavLink>
+          <NavLink className="text-white">Best Sellers</NavLink>
 
           {/* Mobile Search */}
-          <div className="relative">
+          {/* <div className="relative">
             <input 
               type="text" 
               className="p-2 rounded-md pl-10 bg-gray-100 text-black w-full" 
@@ -67,23 +67,23 @@ const Navbar = () => {
             <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2 top-2.5 h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" stroke="currentColor">
               <path fillRule="evenodd" d="M14.293 13.293a1 1 0 011.414 0l3.293 3.293a1 1 0 010 1.414l-3.293 3.293a1 1 0 01-1.414-1.414L15.586 17H12a7 7 0 111.707-1.707L14.293 13.293z" clipRule="evenodd" />
             </svg>
-          </div>
+          </div> */}
         </div>
       )}
 
       {/* Desktop Navigation Links */}
       <div className="hidden md:flex space-x-8 items-center">
-        <a href="#" className="text-white hover:text-gray-200">Home</a>
-        <a href="#" className="text-white hover:text-gray-200">Explore</a>
-        <a href="#" className="text-white hover:text-gray-200">Discover</a>
-        <a href="#" className="text-white hover:text-gray-200">Jobs</a>
-        <a href="#" className="text-white hover:text-gray-200">Contact</a>
+      <NavLink className="text-white">Home</NavLink>
+          <NavLink className="text-white">Desing Templates</NavLink>
+          <NavLink className="text-white">Custom Mockup</NavLink>
+          <NavLink className="text-white">Free Mockup</NavLink>
+          <NavLink className="text-white">Best Sellers</NavLink>
 
         {/* Search Bar */}
         <div className="relative">
           <input 
             type="text" 
-            className="p-2 rounded-md pl-10 bg-gray-100 text-black w-64" 
+            className="p-2 rounded-md pl-10 bg-gray-100 text-black w-96" 
             placeholder="Search..."
           />
           <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2 top-2.5 h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" stroke="currentColor">
