@@ -76,20 +76,8 @@ const Navbar = () => {
           <NavLink to={"/custom-mockup"} className="text-white">
             Custom Mockup
           </NavLink>
-          <NavLink className="text-white">Free Mockup</NavLink>
+          <NavLink className="text-white">3D Model</NavLink>
           <NavLink className="text-white">Best Sellers</NavLink>
-
-          {/* Mobile Search */}
-          {/* <div className="relative">
-            <input 
-              type="text" 
-              className="p-2 rounded-md pl-10 bg-gray-100 text-black w-full" 
-              placeholder="Search..."
-            />
-            <svg xmlns="http://www.w3.org/2000/svg" className="absolute left-2 top-2.5 h-5 w-5 text-gray-500" viewBox="0 0 20 20" fill="none" stroke="currentColor">
-              <path fillRule="evenodd" d="M14.293 13.293a1 1 0 011.414 0l3.293 3.293a1 1 0 010 1.414l-3.293 3.293a1 1 0 01-1.414-1.414L15.586 17H12a7 7 0 111.707-1.707L14.293 13.293z" clipRule="evenodd" />
-            </svg>
-          </div> */}
         </div>
       )}
 
@@ -103,10 +91,10 @@ const Navbar = () => {
           Custom Mockup
         </NavLink>
         <NavLink to={"freemockup"} className="text-white">
-          Free Mockup
+          3D Model
         </NavLink>
         <NavLink to={"/bestSells"} className="text-white">
-          Best Sellers
+          Best Sells
         </NavLink>
 
         {/* Search Bar */}
