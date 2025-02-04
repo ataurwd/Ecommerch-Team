@@ -16,7 +16,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="bg-[#00B894] md:px-10 py-2 md:flex ">
+    <nav className="bg-Mprimary md:px-10 py-2 md:flex ">
       <div className="container mx-auto flex justify-between items-center flex-1">
         {/* Left-side Logo */}
         <div className="text-white text-2xl font-bold">
@@ -125,13 +125,13 @@ const Navbar = () => {
         {!user && (
           <Link
             to={"/login"}
-            className="text-white hover:text-gray-200 p-2 border border-white rounded-md"
+            className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md"
           >
             Login
           </Link>
         )}
         {user && (
-          <button onClick={handelLogout} className="text-white hover:text-gray-200 p-2 border border-white rounded-md">
+          <button onClick={handelLogout} className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md">
             Logout
           </button>
         )}
