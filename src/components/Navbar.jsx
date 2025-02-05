@@ -9,7 +9,7 @@ const Navbar = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  const handelLogout = () =>{
+  const handelLogout = () => {
     logOut()
   }
 
@@ -120,22 +120,39 @@ const Navbar = () => {
         </div>
 
         {/* Login/Logout Button */}
-        {!user && (
+        {/* {!user && (
           <Link
             to={"/login"}
             className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md"
           >
             Login
           </Link>
-        )}
-        {user && (
-          <button onClick={handelLogout} className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md">
+        )} */}
+        {/* {user && (
+          <button  className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md">
             Logout
           </button>
-        )}
+        )} */}
 
         {/* Profile Icon */}
-        {user && (
+        {
+          user ? <div className="dropdown dropdown-end z-50">
+            <div tabIndex={0} role="button" className=""> {<img className="w-[50px] h-[50px] bg-cover border border-[#71A45E] rounded-full" src={user.photoURL} alt={user.displayName} /> || <GiHamburgerMenu />} </div>
+            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+             <NavLink className={"btn mb-4"} to={"/dashboard/all-session"}><a>Dashboard</a></NavLink>
+
+              <a
+                onClick={handelLogout}
+                className="btn">Logout</a>
+            </ul>
+          </div> :  <Link
+            to={"/login"}
+            className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md"
+          >
+            Login
+          </Link>
+        }
+        {/* {user && (
           <div className="text-white cursor-pointer">
             <img
               src={user?.photoURL}
@@ -143,7 +160,7 @@ const Navbar = () => {
               className="w-10 h-10 rounded-full"
             />
           </div>
-        )}
+        )} */}
       </div>
     </nav>
   );
