@@ -5,8 +5,6 @@ import { AuthContext } from "./../Providers/AuthProvider";
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { user, logOut } = useContext(AuthContext);
-  console.log(user?.photoURL);
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
