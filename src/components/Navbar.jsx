@@ -10,8 +10,8 @@ const Navbar = () => {
   };
 
   const handelLogout = () => {
-    logOut()
-  }
+    logOut();
+  };
 
   return (
     <nav className="bg-Mprimary md:px-10 py-2 md:flex ">
@@ -135,23 +135,39 @@ const Navbar = () => {
         )} */}
 
         {/* Profile Icon */}
-        {
-          user ? <div className="dropdown dropdown-end z-50">
-            <div tabIndex={0} role="button" className=""> {<img className="w-[50px] h-[50px] bg-cover border border-[#71A45E] rounded-full" src={user.photoURL} alt={user.displayName} /> || <GiHamburgerMenu />} </div>
-            <ul tabIndex={0} className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-             <NavLink className={"btn mb-4"} to={"/dashboard/all-session"}><a>Dashboard</a></NavLink>
+        {user ? (
+          <div className="dropdown dropdown-end z-50">
+            <div tabIndex={0} role="button" className="">
+              {" "}
+              {(
+                <img
+                  className="w-[50px] h-[50px] bg-cover border border-[#71A45E] rounded-full"
+                  src={user.photoURL}
+                  alt={user.displayName}
+                />
+              ) || <GiHamburgerMenu />}{" "}
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+            >
+              <NavLink className={"mb-4 text-center py-2 bg-Mprimary rounded-md mx-2 text-white"} to={"/admin-dashboard"}>
+                <a>Dashboard</a>
+              </NavLink>
 
-              <a
-                onClick={handelLogout}
-                className="btn">Logout</a>
+              <a onClick={handelLogout} className="text-center py-2 bg-red-500 rounded-md mx-2 text-white cursor-pointer">
+                Logout
+              </a>
             </ul>
-          </div> :  <Link
+          </div>
+        ) : (
+          <Link
             to={"/login"}
             className="text-white hover:text-gray-200 px-5 py-1 border border-white rounded-md"
           >
             Login
           </Link>
-        }
+        )}
         {/* {user && (
           <div className="text-white cursor-pointer">
             <img
