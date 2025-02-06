@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "./../Providers/AuthProvider";
+import logo from '../assets/logo.png'
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center flex-1">
         {/* Left-side Logo */}
         <div className="text-white text-2xl font-bold">
-          <a href="/">Logo</a>
+          <img className="w-14" src={logo} alt="" />
         </div>
 
         {/* Centered Search Bar for Mobile */}
