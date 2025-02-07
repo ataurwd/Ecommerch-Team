@@ -155,6 +155,9 @@ const Navbar = () => {
               <NavLink className={"mb-4 text-center py-2 bg-Mprimary rounded-md mx-2 text-white"} to={"/admin-dashboard"}>
                 <a>Dashboard</a>
               </NavLink>
+              <NavLink className={"mb-4 text-center py-2 bg-Mprimary rounded-md mx-2 text-white"} to={"/user-dashboard/all"}>
+                <a>Profile</a>
+              </NavLink>
 
               <a onClick={handelLogout} className="text-center py-2 bg-red-500 rounded-md mx-2 text-white cursor-pointer">
                 Logout

@@ -6,7 +6,10 @@ const UserLayout = () => {
     const { user } = UseAuth()
     return (
         <div className="">
-            <Link to='/user-dashboard/all' className="btn m-8">Account</Link>
+           <div className="m-8 flex gap-3">
+           <Link to='/user-dashboard/all' className="btn">Account</Link>
+           <Link to='/' className="btn">Home</Link>
+           </div>
             <div className="flex flex-col items-center justify-center">
                 <div className="flex items-center justify-center gap-7 mt-10">
                     <img className="rounded-full w-20" src={user?.photoURL} alt="" />
