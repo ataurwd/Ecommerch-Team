@@ -16,6 +16,11 @@ import Transactions from './../layout/admin/Transactions';
 import ManageUsers from './../layout/admin/ManageUsers';
 import UserLayout from "../layout/UserLayout/UserLayout";
 import UserDashboardBtn from "../pages/User-dashboard/UserDashboardBtn";
+import UserOrder from "../pages/User-dashboard/UserOrder";
+import EditProfile from "../pages/User-dashboard/EditProfile";
+import Wishlist from "../pages/User-dashboard/Wishlist";
+import UserTransaction from "../pages/User-dashboard/UserTransaction";
+import ChangePassword from "../pages/User-dashboard/ChangePassword";
 
 const Routes = () => {
   const route = createBrowserRouter([
@@ -96,7 +101,27 @@ const Routes = () => {
         {
           path : '/user-dashboard/all',
           element : <UserDashboardBtn/>
-        }
+        },
+        {
+          path : '/user-dashboard/all/order',
+          element : <UserOrder/>
+        },
+        {
+          path : '/user-dashboard/all/edit-profile',
+          element : <EditProfile/>
+        },
+        {
+          path : '/user-dashboard/all/Wishlist',
+          element : <Wishlist/>
+        },
+        {
+          path : '/user-dashboard/all/transaction',
+          element : <UserTransaction/>
+        },
+        {
+          path : '/user-dashboard/all/passord',
+          element : <ChangePassword/>
+        },
       ]
     }
   ]);
