@@ -14,6 +14,8 @@ import ManageProduct from './../layout/admin/ManageProduct';
 import ManageOrder from './../layout/admin/ManageOrder';
 import Transactions from './../layout/admin/Transactions';
 import ManageUsers from './../layout/admin/ManageUsers';
+import UserLayout from "../layout/UserLayout/UserLayout";
+import UserDashboardBtn from "../pages/User-dashboard/UserDashboardBtn";
 
 const Routes = () => {
   const route = createBrowserRouter([
@@ -50,7 +52,8 @@ const Routes = () => {
           element: <Register/>
         },
       ],
-    }, {
+    },
+     {
       path: '/admin-dashboard',
       element: <AdminDashBoard />,
       children: [
@@ -79,6 +82,21 @@ const Routes = () => {
           path: 'admin-dashboard/manage-users',
           element: <ManageUsers/>
         },
+        // user 
+        {
+          path: 'admin-dashboard/user-profile',
+          element: <ManageUsers/>
+        },
+      ]
+    },
+    {
+      path : '/user-dashboard',
+      element : <UserLayout/>,
+      children : [
+        {
+          path : '/user-dashboard/all',
+          element : <UserDashboardBtn/>
+        }
       ]
     }
   ]);
