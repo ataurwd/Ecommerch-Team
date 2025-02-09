@@ -77,8 +77,8 @@ const Navbar = () => {
           <NavLink to={"/custom-mockup"} className="text-white">
             Custom Mockup
           </NavLink>
-          <NavLink className="text-white">3D Model</NavLink>
-          <NavLink className="text-white">Best Sellers</NavLink>
+          <NavLink className="text-white">3D Models</NavLink>
+          <NavLink className="text-white">Best Sells</NavLink>
         </div>
       )}
 
